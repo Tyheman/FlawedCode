@@ -16,7 +16,8 @@ public class Script1{
         Link: https://wiki.sei.cmu.edu/confluence/display/java/MSC02-J.+Generate+strong+random+numbers
         Violation: Generating true and Strong random Numbers
          */
-        Random number = new Random(123L);
+        //RESOLVED - switched SecureRandom class to generate random numbers
+        SecureRandom number = new SecureRandom();
         for (int i = 0; i < 20; i++) {
             // Generate another random integer in the range [0, 20]
             int n = number.nextInt(21);
@@ -31,7 +32,8 @@ public class Script1{
         Link: https://wiki.sei.cmu.edu/confluence/display/java/EXP02-J.+Do+not+use+the+Object.equals%28%29+method+to+compare+two+arrays
         Violation: Comapring Arrays
          */
-        System.out.println(arr1.equals(arr2));
+        //RESOLVED used the equals method in the Arrays class to compare array contents
+        System.out.println(Arrays.equals(arr1, arr2));
 
     }
 }
