@@ -10,8 +10,7 @@ class Script2 {
      */
     public static void main(String[] args) {
         System.out.print("The name of the user using this computer is: ");
-        //RESOLVED - changed to directly get system property instead of from the environment
-        String username = System.getProperty("user.name");
+        String username = System.getenv("USER");
         System.out.println(username); // Example "Tyler"
     }
 }
